@@ -6,7 +6,7 @@ module.exports = {
         'webpack/hot/only-dev-server',
         './src/index.js'
     ],
-    modulue: {
+    module: {
         loaders: [{
             test: /\.jsx?$/,
             exclude: /node_modules/,
@@ -14,7 +14,7 @@ module.exports = {
         }]
     },
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['.js', '.jsx']
     },
     output: {
         path: __dirname + '/dist/',
