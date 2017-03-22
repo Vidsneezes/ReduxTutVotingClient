@@ -10,6 +10,10 @@ class Voting extends React.Component {
         return !!this.props.hasVoted;
     }
 
+    hasVotedFor(entry) {
+        return this.props.hasVoted === entry;
+    }
+
     render() {
         return (
           <div className="voting">
@@ -20,6 +24,9 @@ class Voting extends React.Component {
                 onClick={() => this.props.vote(entry)}
               >
                 <h1>{entry}</h1>
+                {this.hasVotedFor(entry) ?
+                  <div className="label">Voted</div> : null
+                }
               </button>
             )}
           </div>
