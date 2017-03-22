@@ -1,4 +1,5 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
     entry: [
@@ -10,14 +11,14 @@ module.exports = {
         loaders: [{
             test: /\.jsx?$/,
             exclude: /node_modules/,
-            loader: 'react-hot-loader!babel-loader'
+            loader: 'react-hot-loader!babel-loader',
         }]
     },
     resolve: {
         extensions: ['.js', '.jsx']
     },
     output: {
-        path: __dirname + '/dist/',
+        path: path.join(__dirname, '/dist/'),
         publicPath: '/',
         filename: 'bundle.js'
     },

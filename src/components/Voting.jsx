@@ -2,20 +2,20 @@ import React from 'react';
 
 class Voting extends React.Component {
 
-    getPair(){
+    getPair() {
         return this.props.pair || [];
     }
 
-    render(){
+    render() {
         return (
-            <div className="voting">
-            {this.getPair().map(entry => 
-                    <button key={entry}>
-                    <h1>{entry}</h1>
-                    </button>
-                )}
-            </div>
-        )
+          <div className="voting">
+            {this.getPair().map(entry =>
+              <button key={entry}>
+                <h1>{entry}</h1>
+              </button>
+            )}
+          </div>
+        );
     }
 
 }
