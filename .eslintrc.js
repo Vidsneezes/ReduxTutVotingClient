@@ -1,5 +1,6 @@
 module.exports = {
-    "extends": "airbnb",
+    parser: "babel-eslint",
+    "extends": ["airbnb"],
     "rules": {
         "linebreak-style": ["error", "windows"],
         "indent": ["error", 4],
