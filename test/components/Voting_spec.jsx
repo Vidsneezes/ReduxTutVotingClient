@@ -61,7 +61,7 @@ describe('Voting', () => {
 
         const winner = ReactDOM.findDOMNode(component.refs.winner);
         expect(winner).to.be.ok;
-        expect(winner.textContent).to.contain('Trainspotting');
+        expect(winner.textContent).to.contain('Trainspotting'); 
     });
 
 });
