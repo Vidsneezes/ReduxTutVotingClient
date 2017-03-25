@@ -1,7 +1,13 @@
-import { List, Map, fromJS } from 'immutable';
-import { expect } from 'chai';
+import {
+    List,
+    Map,
+    fromJS
+} from 'immutable';
+import {
+    expect
+} from 'chai';
 
-import reducer from '../src/reducer';
+import reducer from '../../src/reducer';
 
 describe('reducer', () => {
     it('handles SET_STATE', () => {
@@ -11,7 +17,9 @@ describe('reducer', () => {
             state: Map({
                 vote: Map({
                     pair: List.of('Trainspotting', '28 Days Later'),
-                    tally: Map({ Trainspotting: 1 })
+                    tally: Map({
+                        Trainspotting: 1
+                    })
                 })
             })
         };
@@ -20,7 +28,9 @@ describe('reducer', () => {
         expect(nextState).to.equal(fromJS({
             vote: {
                 pair: ['Trainspotting', '28 Days Later'],
-                tally: { Trainspotting: 1 }
+                tally: {
+                    Trainspotting: 1
+                }
             }
         }));
     });
@@ -32,7 +42,9 @@ describe('reducer', () => {
             state: {
                 vote: {
                     pair: ['Trainspotting', '28 Days Later'],
-                    tally: { Trainspotting: 1 }
+                    tally: {
+                        Trainspotting: 1
+                    }
                 }
             }
         };
@@ -41,7 +53,9 @@ describe('reducer', () => {
         expect(nextState).to.equal(fromJS({
             vote: {
                 pair: ['Trainspotting', '28 Days Later'],
-                tally: { Trainspotting: 1 }
+                tally: {
+                    Trainspotting: 1
+                }
             }
         }));
     });
@@ -52,7 +66,9 @@ describe('reducer', () => {
             state: {
                 vote: {
                     pair: ['Trainspotting', '28 Days Later'],
-                    tally: { Trainspotting: 1 }
+                    tally: {
+                        Trainspotting: 1
+                    }
                 }
             }
         };
@@ -61,7 +77,9 @@ describe('reducer', () => {
         expect(nextState).to.equal(fromJS({
             vote: {
                 pair: ['Trainspotting', '28 Days Later'],
-                tally: { Trainspotting: 1 }
+                tally: {
+                    Trainspotting: 1
+                }
             }
         }));
     });
