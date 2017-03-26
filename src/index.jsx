@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Router, Route, hashHistory } from 'react-router';
+import { Provider } from 'react-redux';
 import reducer from './reducer';
 import App from './components/App';
 import Voting from './components/Voting';
@@ -25,6 +26,8 @@ const routes = (
   </Route>);
 
 ReactDOM.render(
-  <Router history={hashHistory}>{routes}</Router>,
+  <Provider>
+    <Router history={hashHistory}>{routes}</Router>
+  </Provider>,
   document.getElementById('app')
 );
