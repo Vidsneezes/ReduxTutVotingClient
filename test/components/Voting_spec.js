@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { expect } from 'chai';
 import { List } from 'immutable';
 import { renderIntoDocument, scryRenderedDOMComponentsWithTag, Simulate } from 'react-addons-test-utils';
-import Voting from '../../src/components/Voting';
+import { Voting } from '../../src/components/Voting';
 
 describe('Voting', () => {
     it('renders a pair of buttons', () => {
