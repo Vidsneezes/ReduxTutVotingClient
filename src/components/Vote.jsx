@@ -35,4 +35,5 @@ class Vote extends React.PureComponent {
 
 }
 
+
 export default Vote;
