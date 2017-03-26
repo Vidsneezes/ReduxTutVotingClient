@@ -7,12 +7,12 @@ import {
 } from 'react-addons-test-utils';
 import { List, Map } from 'immutable';
 import { expect } from 'chai';
-import Results from '../../src/components/Results';
+import { Results } from '../../src/components/Results';
 
 describe('Results', () => {
     it('renders entries with vote count or zero', () => {
         const pair = List.of('Trainspotting', '28 Days Later');
-        const tally = Map({ 'Trainspotting': 5 });
+        const tally = Map({ Trainspotting: 5 });
         const component = renderIntoDocument(
           <Results pair={pair} tally={tally} />
         );
